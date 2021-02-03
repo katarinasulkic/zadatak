@@ -3,6 +3,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .jobs-categories {
@@ -22,7 +23,6 @@ body {
 }
 
 li, a, button {
-    font-family: 'Quicksand', sans-serif;
     font-weight: 200;
     font-size: 13px;
     color: white;
@@ -94,7 +94,6 @@ button:hover {
 .middle { 
     padding-top: 30px;
     padding-bottom: 0px;
-    font-family:'Quicksand', sans-serif;
     font-weight: 200;
     font-size: 35px;
     text-align: center;
@@ -105,7 +104,6 @@ button:hover {
 }
 
 .middle div p {
-    font-family:'Quicksand', sans-serif;
     font-size: 10px;
 }
 
@@ -151,7 +149,6 @@ button:hover {
 .main-text {
     color: #0a0e33;
     padding-top: 50px;
-    font-family:'Quicksand', sans-serif;
     font-size: 17px;
     text-align: center;
     margin-bottom: 30px;
@@ -167,7 +164,6 @@ button:hover {
     display: flex;
     text-align: center;
     margin-top: 26px;   
-    font-family: 'Quicksand', sans-serif;
     font-size: 10px;
     font-weight: 600;
 }
@@ -175,13 +171,6 @@ button:hover {
 .item p {
     margin-top: 0px; 
     padding-bottom: 10px;
-}
-
-.picture-container {
-    width: 80%;
-    height: 50%;
-    margin-left: 26px;
-    border: 2px solid rgb(240, 240, 242);
 }
 
 .picture-container:hover {
@@ -196,4 +185,20 @@ button:hover {
 
 .picture-container:hover {
     background-color: #3552f3;  
+}
+
+.find-container-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.picture-container {
+    width: 22%;
+    height: 100px;
+    border: 2px solid rgb(240, 240, 242);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-align: center;
 }
