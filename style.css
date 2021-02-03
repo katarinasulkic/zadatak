@@ -122,27 +122,20 @@ button:hover {
     vertical-align: middle;
 }
 
-.search1 {
-    padding: 6px 0px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+.search-title {
     background: white url('search.svg') left no-repeat;
-    background-size: 11px ;
-    padding-left: 34px;
-    background-position: 15px;
-    outline:none;
-    font-size: 11px;
 }
 
-.search2 {
+.search-location {
+    background: white url('pin.svg') left no-repeat;  
+}
+
+.search-main {
     padding: 6px 0px;;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    background: white url('pin.svg') left no-repeat;
     background-size: 11px ;
     padding-left: 34px;
     background-position: 15px;
@@ -151,7 +144,7 @@ button:hover {
     font-size: 11px;
 }
 
-.find-jobs{
+.find-jobs {
     height: 400px;   
 }
 
@@ -164,7 +157,7 @@ button:hover {
     margin-bottom: 30px;
 }
 
-.find-container{
+.find-container {
     width: 760px;
     height: 100%;
     margin:0 auto 0;
