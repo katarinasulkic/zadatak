@@ -202,3 +202,16 @@ button:hover {
     margin-bottom: 15px;
     text-align: center;
 }
+@media only screen and (max-width: 800px) { 
+    .picture-container {
+        width: 45%;
+        background-color: aquamarine;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    .picture-container {
+        width: 93%;
+        background-color: burlywood;
+    }
+    }
