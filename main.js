@@ -18,7 +18,7 @@ const jobs = [
   
     // 2.3. dodati mu innerHTML  -> vezba string templating in js
     newItem.innerHTML = `
-      <i class="fa ${job.className} picture"></i>
+      <i class="fa 'fa-user' picture"></i>
       <p>${job.name}</p>
     `;
   
@@ -26,12 +26,70 @@ const jobs = [
     container.appendChild(newItem);
   }
   
-  const main = () => {
-    // 2. proci kroz data array
-      //cb input => output
-    jobs.map(job => renderJob(job));
+  const main = (data) => {
+    const result = data.map(user => ({
+      id: user.id, 
+      name: user.name,
+      companyName: user.company.name, 
+      street: `${user.address.street}, ${user.address.zipcode}, ${user.address.city}`
+    }));
+
+       data.map(job => renderJob(job));
+    console.log(result); 
+   
   };
+
   
-  main();
+  
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    main(data);
+});
+
+
+
+// 1. dovuci podatke sa servera
+
+// 2. mapirati podatke u objekte koji imaju name, companyName, address, id
+
+// 3. prikazati umesto jobs kockica, kockice sa ovim informacijama (dovoljno je samo napisati name ispod ikonice)
+
+
+/**
+{
+"id": 1,
+"name": "Leanne Graham",
+"username": "Bret",
+"email": "sincere@april.biz",
+"address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+},
+"phone": "1-770-736-8031 x56442",
+"website": "hildegard.org",
+"company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+},
+
+=> 
+
+{
+  id: 1,
+  name: "Leanne Graham",
+  companyName: "Romaguera-Crona",
+  address: "Kulas Light, 92998-3874 Gwenborough"
+}
+ */
 
   
